@@ -6,7 +6,7 @@ Tento repozitář obsahuje skripty pro simulaci šifrování (ransomware) a nás
 ---
 
 ## Jak to funguje
--**`Ecrypt.py`**: Šifruje soubory ve složce uživatele (home directory). K šifrování symetrického klíče vyžaduje veřejný RSA klíč.
+- **`Ecrypt.py`**: Šifruje soubory ve složce uživatele (home directory). K šifrování symetrického klíče vyžaduje veřejný RSA klíč.
 - **`Decrypt.py`**: Dešifruje soubory zašifrované pomocí `Encrypt.py`. K dešifrování symetrického klíče vyžaduje privátní RSA klíč.
 
 Skripty pracují s těmito typy souborů: `.doc`, `.pdf`, `.jpg`, `.txt` a další. Typy souborů lze upravit v proměnné `extensions`.
@@ -35,7 +35,7 @@ Použití mimo bezpečné prostředí může vést k nechtěnému šifrování d
 
   Z privátního klíče vytvořte veřejný klíč:
   
-    openssl rsa -pubout -in private_key.pem -out public_key.pem
+       openssl rsa -pubout -in private_key.pem -out public_key.pem
 
 4. Nastavte environmentální proměnné:
   Pro šifrování:
@@ -44,7 +44,7 @@ Použití mimo bezpečné prostředí může vést k nechtěnému šifrování d
   
   Pro dešifrování:
   
-    export PRIVATE_KEY_PATH=/cesta/k/private_key.pem
+      export PRIVATE_KEY_PATH=/cesta/k/private_key.pem
     
 ---
 
