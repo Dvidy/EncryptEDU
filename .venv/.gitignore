@@ -1,0 +1,7 @@
+# Ignore RSA keys and sensitive files
+*.pem
+encrypted_sym_key.bin
+
+# Byte-compiled files
+*.pyc
+__pycache__/
