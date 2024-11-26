@@ -29,21 +29,21 @@ Použití mimo bezpečné prostředí může vést k nechtěnému šifrování d
     pip install cryptography
 
 3. RSA klíče:
-  Vygenerujte privátní klíč:
+    Vygenerujte privátní klíč:
     ```bash
     openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
     
   Z privátního klíče vytvořte veřejný klíč:
-    ```bash
-   openssl rsa -pubout -in private_key.pem -out public_key.pem
+    
+    openssl rsa -pubout -in private_key.pem -out public_key.pem
 
 4. Nastavte environmentální proměnné:
-  Pro šifrování:
+   Pro šifrování:
    ```bash
     export PUBLIC_KEY_PATH=/cesta/k/public_key.pem
   Pro dešifrování:
-   ```bash
-   export PRIVATE_KEY_PATH=/cesta/k/private_key.pem 
+   
+    export PRIVATE_KEY_PATH=/cesta/k/private_key.pem 
     
 ---
 
